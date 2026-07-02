@@ -1,0 +1,115 @@
+1. What is Time Complexity?
+
+Time Complexity tells us how much time an algorithm takes to run as the input size increases.
+
+It does not measure actual time (like 2 seconds or 5 seconds).
+
+Instead, it measures how the number of operations grows.
+
+Simple Formula
+
+Time Complexity = Number of operations performed
+
+Why do we need Time Complexity?
+
+Suppose you have two programs.
+
+Program A takes 100 operations.
+
+Program B takes 10,000 operations.
+
+Both give the same answer, but Program A is much faster.
+
+Time complexity helps us choose the better algorithm.
+
+Example
+for i in range(n):
+    print(i)
+
+If
+
+n = 5
+
+Loop runs 5 times
+
+If
+
+n = 100
+
+Loop runs 100 times
+
+Operations increase with n.
+
+So,
+
+Time Complexity = O(n)
+
+Real-Life Example
+
+Imagine counting students in a classroom.
+
+10 students → count 10 times
+100 students → count 100 times
+1000 students → count 1000 times
+
+More students = more work.
+
+2. What is Space Complexity?
+Definition
+
+Space Complexity tells us how much extra memory an algorithm uses while running.
+
+It includes:
+
+Variables
+Arrays
+Lists
+Stack memory (Recursion)
+Example
+a = 10
+b = 20
+c = a + b
+
+Only 3 variables are used.
+
+Space Complexity = O(1)
+
+Another example
+
+arr = []
+
+for i in range(n):
+    arr.append(i)
+
+If
+
+n = 100
+
+Array stores 100 values.
+
+Extra memory grows with n.
+
+Space Complexity = O(n)
+
+Real-Life Example
+
+Imagine carrying books.
+
+1 book → little space
+100 books → more space
+
+More books = more memory.
+
+3. What is Big O Notation?
+
+Big O tells us how fast the running time or memory grows when the input becomes very large.
+
+Examples
+
+O(1)
+O(log n)
+O(n)
+O(n log n)
+O(n²)
+
+We mostly use Big O in coding interviews.

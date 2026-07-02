@@ -1,0 +1,107 @@
+Time Complexity of Python Operations
+List
+Operation	Time
+len(lst)	O(1)
+lst[i]	O(1)
+lst[i] = x	O(1)
+append(x)	O(1) (average)
+pop()	O(1)
+pop(0)	O(n)
+insert(0, x)	O(n)
+insert(i, x)	O(n)
+remove(x)	O(n)
+x in lst	O(n)
+index(x)	O(n)
+count(x)	O(n)
+sort()	O(n log n)
+reverse()	O(n)
+copy()	O(n)
+clear()	O(n)
+extend(other)	O(k) (k = elements added)
++ (concatenate)	O(n + m)
+Slicing lst[a:b]	O(k)
+String
+
+Strings are immutable (cannot be changed after creation).
+
+Operation	Time
+len(s)	O(1)
+s[i]	O(1)
+x in s	O(n)
+find()	O(n)
+replace()	O(n)
+split()	O(n)
+"".join(list)	O(n)
+Concatenation a + b	O(n + m)
+Slicing	O(k)
+Dictionary (dict)
+Operation	Time
+d[key]	O(1) (average)
+d[key] = value	O(1) (average)
+del d[key]	O(1) (average)
+key in d	O(1) (average)
+get()	O(1) (average)
+keys()	O(1) (view creation)
+values()	O(1) (view creation)
+items()	O(1) (view creation)
+
+Worst case: O(n), but this is rare because Python uses hashing.
+
+Set
+Operation	Time
+add()	O(1) (average)
+remove()	O(1) (average)
+discard()	O(1) (average)
+x in set	O(1) (average)
+pop()	O(1) (average)
+Union `	`
+Intersection &	O(min(len(s1), len(s2)))
+Difference -	O(len(s1))
+Tuple
+Operation	Time
+len()	O(1)
+Indexing	O(1)
+Slicing	O(k)
+Search (in)	O(n)
+7. Time Complexity of Loops
+
+Single loop
+
+for i in range(n):
+
+Time
+
+O(n)
+
+Nested loop
+
+for i in range(n):
+    for j in range(n):
+
+Time
+
+O(n²)
+
+Three nested loops
+
+for i in range(n):
+    for j in range(n):
+        for k in range(n):
+
+Time
+
+O(n³)
+
+Loop dividing by 2 each time
+
+while n > 1:
+    n = n // 2
+
+Time
+
+O(log n)
+8. Time Complexity vs Space Complexity
+Time Complexity	Space Complexity
+Measures running time	Measures memory usage
+Counts operations	Counts extra memory
+Faster is better	Less memory is better
