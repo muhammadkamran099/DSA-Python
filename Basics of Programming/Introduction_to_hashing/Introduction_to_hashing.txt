@@ -1,0 +1,77 @@
+1. What is Hashing?
+
+
+Hashing is a technique used to store and find data very quickly using a key.
+
+In Python, hashing is mainly implemented using:
+
+Dictionary (dict)
+Set (set)
+
+Both use a hash table internally.
+
+Simple Definition
+
+Hashing is a way to store data so that searching, inserting, and deleting are very fast.
+
+2. Why do we use Hashing?
+
+Without hashing, finding an item in a list may require checking every element.
+
+Example:
+
+nums = [10, 20, 30, 40]
+
+To find 30, Python may check:
+
+10 ❌
+20 ❌
+30 ✅
+
+Time Complexity:
+
+O(n)
+
+Using a dictionary:
+
+marks = {
+    "Ali": 90,
+    "Ahmed": 85
+}
+
+Finding "Ali" is usually:
+
+O(1)
+
+Much faster.
+
+3. How Does Hashing Work? (Simple Idea)
+
+Suppose we store:
+
+{
+    "apple": 5
+}
+
+Python:
+
+Takes the key "apple".
+Calculates a hash value (a unique number).
+Uses that hash value to decide where to store the data.
+Later, when you search "apple", Python calculates the same hash value and goes directly to the correct location.
+
+You don't need to calculate the hash yourself—Python does it automatically.
+
+4. Real-Life Example
+
+Imagine a library.
+
+Without hashing:
+
+You search every shelf one by one.
+
+With hashing:
+
+The librarian immediately tells you the exact shelf.
+
+Hashing saves time.
