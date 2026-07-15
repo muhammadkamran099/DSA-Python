@@ -1,1 +1,7 @@
-nums = [55, 32, -97, 99, 3, 67]
+nums = [55, 92, -97, 9, 3, 67]
+largest = nums[0]
+n = len(nums)
+for i in range(1, n):
+    largest = max(largest, nums[i])
+    
+print(largest)
