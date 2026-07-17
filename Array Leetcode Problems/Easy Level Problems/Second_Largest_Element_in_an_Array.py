@@ -1,12 +1,14 @@
 nums = [55, 92, -97, 9, 3, 67]
-largest = float('inf')
-s_largest = float('inf')
-n = len(nums)
-for i in range(1, n):
-    if s_largest < largest:
+
+largest = float('-inf')
+s_largest = float('-inf')
+
+for num in nums:
+    if num > largest:
         s_largest = largest
-    largest = max(largest, nums[i])
-    
-    
-print(largest)
-print(s_largest)
+        largest = num
+    elif num > s_largest and num != largest:
+        s_largest = num
+
+print("Largest:", largest)
+print("Second Largest:", s_largest)
