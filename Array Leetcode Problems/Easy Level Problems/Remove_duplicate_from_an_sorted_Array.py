@@ -33,5 +33,4 @@ def Remove_duplicate(nums):
 
 k = Remove_duplicate(nums)
 
-print(k)
 print(nums)
