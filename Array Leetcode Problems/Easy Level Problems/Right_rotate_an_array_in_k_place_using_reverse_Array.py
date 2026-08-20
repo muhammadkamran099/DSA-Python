@@ -1,3 +1,6 @@
+
+# Right Rotate in k place by Reverse Array
+
 def reverse(nums, left, right):
     while left < right:
         nums[left], nums[right] = nums[right], nums[left]
