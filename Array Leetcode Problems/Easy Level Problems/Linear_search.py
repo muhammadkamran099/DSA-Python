@@ -1,3 +1,5 @@
+#  Linear Search
+
 def find_target(nums, target):
     for i in range(0, len(nums)):
         if nums[i] == target:
