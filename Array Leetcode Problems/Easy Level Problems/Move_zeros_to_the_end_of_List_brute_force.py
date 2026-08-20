@@ -1,3 +1,6 @@
+
+# Brute Force 
+
 def move_zeros(nums):
     
     n = len(nums)
