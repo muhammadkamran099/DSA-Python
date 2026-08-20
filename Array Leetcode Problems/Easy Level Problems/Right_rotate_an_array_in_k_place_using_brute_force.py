@@ -1,3 +1,6 @@
+
+# Brute Force
+
 def rotate_array(nums, k):
     n = len(nums)
     rotations = k % n
