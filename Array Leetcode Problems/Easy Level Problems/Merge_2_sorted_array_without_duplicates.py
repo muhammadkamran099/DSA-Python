@@ -1,3 +1,4 @@
+# Merge_2_sorted_array_without_duplicates
 def union_sorted_arrays(nums1, nums2):
 
     n = len(nums1)
