@@ -1,4 +1,4 @@
-
+# Brute Force
 
 def TwoSum(nums, target):
     n = len(nums)
