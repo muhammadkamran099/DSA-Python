@@ -1,3 +1,4 @@
+# Optimal Solution
 def TwoSum(nums, target):
     n = len(nums)
     hash_map = {}
