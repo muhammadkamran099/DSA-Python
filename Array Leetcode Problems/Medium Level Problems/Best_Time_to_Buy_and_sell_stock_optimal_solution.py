@@ -9,7 +9,7 @@ def best_time_to_buy_and_sell(prices):
     return max_profit
 
 
-prices = [7, 2, 1, 5, 6, 4, 8]
+prices = [7, 2, 1, 5, 6, 4, 8, 9]
 
 result = best_time_to_buy_and_sell(prices)
 
