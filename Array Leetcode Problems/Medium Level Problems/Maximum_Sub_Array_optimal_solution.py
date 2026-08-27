@@ -1,3 +1,4 @@
+# Maximum Sub Array optimal solution
 def max_sub_array(nums):
     total = 0
     max_sum = float("-inf")
