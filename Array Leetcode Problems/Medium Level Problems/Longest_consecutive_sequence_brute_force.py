@@ -15,7 +15,7 @@ def longest_consecutive(nums):
     return max_count
 
 
-nums = [1, 99, 101, 98, 2, 5, 3, 10, 1, 1]
+nums = [1, 99, 101, 98, 2, 5, 3, 100, 1, 1]
 
 result = longest_consecutive(nums)
 
