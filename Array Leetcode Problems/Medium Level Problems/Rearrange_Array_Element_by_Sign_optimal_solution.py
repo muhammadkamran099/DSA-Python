@@ -16,7 +16,7 @@ def rearrange_by_sign(nums):
     return result
 
 
-nums = [5, 10, -3, -1, -10, 6]
+nums = [5, 10, -3, -1, -10, 5]
 
 result = rearrange_by_sign(nums)
 
