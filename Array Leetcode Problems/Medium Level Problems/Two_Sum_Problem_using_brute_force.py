@@ -8,7 +8,7 @@ def TwoSum(nums, target):
                 return [i, j]
     return -1
 
-nums = [5, 9, 1, 2, 4, 15, 6, 3]
+nums = [5, 9, 1, 2, 4, 15, 6]
 
 target = 13
 
