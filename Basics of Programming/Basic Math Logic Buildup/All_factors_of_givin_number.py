@@ -1,4 +1,4 @@
-# All force of givin number
+# All Force of givin numver
 result = []
 
 n = int(input("Enter a number: "))
