@@ -1,5 +1,5 @@
 # Insertion Sort
-nums = [ 3, 4, 5, 6, 8, 9, 10, 7,  1, 2]
+nums = [ 3, 4, 5, 6, 8, 9, 10, 7,  1]
 n = len(nums)
 for i in range(1, n):
     key = nums[i]
