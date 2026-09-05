@@ -1,4 +1,4 @@
-nums = [ 3, 4, 5, 6, 8, 9, 10, 7,  1]
+nums = [ 3, 4, 5, 6, 8, 9, 10, 7,  1, 2]
 n = len(nums)
 for i in range(0, n):
     min_index = i
