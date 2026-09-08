@@ -16,7 +16,7 @@ def longest_consecutive_sequence(nums):
     return longest
 
 
-nums = [1, 99, 101, 98, 2, 5, 3, 100, 1]
+nums = [1, 99, 101, 98, 2, 5, 3, 100, 1, 1]
 
 result = longest_consecutive_sequence(nums)
 print(result)
