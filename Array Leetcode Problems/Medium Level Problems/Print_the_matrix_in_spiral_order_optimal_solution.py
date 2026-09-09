@@ -4,7 +4,6 @@ class Solution:
             return []
 
         result = []
-
         top = 0
         left = 0
         bottom = len(matrix) - 1
