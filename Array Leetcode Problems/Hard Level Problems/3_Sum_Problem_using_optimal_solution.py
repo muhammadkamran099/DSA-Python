@@ -1,3 +1,4 @@
+# Better Solution
 def find_triplets(arr):
     n = len(arr)
     result = set()
