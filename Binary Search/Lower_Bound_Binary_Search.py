@@ -1,15 +1,15 @@
 def lower_bound(nums: list[int], target: int) -> int:
     n = len(nums)
-    lb = -1  # Set to -1 if no element >= target exists
+    lb = -1  
     low, high = 0, n - 1
 
     while low <= high:
         mid = (low + high) // 2
 
         if nums[mid] >= target:
-            lb = mid        # Store potential lower bound index
-            high = mid - 1  # Search left half for a smaller valid index
+            lb = mid        
+            high = mid - 1  
         else:
-            low = mid + 1   # Search right half
+            low = mid + 1   
 
     return lb
