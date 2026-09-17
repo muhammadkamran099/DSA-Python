@@ -10,7 +10,7 @@ def ceilFloor_binary(nums, target):
         if nums[mid] == target:
             return nums[mid], nums[mid]
         elif nums[mid] < target:
-            floor = nums[mid]  
+            floor = nums[mid] 
             low = mid + 1      
         else:
             ceil = nums[mid]   
