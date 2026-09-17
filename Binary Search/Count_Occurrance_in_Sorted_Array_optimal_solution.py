@@ -20,7 +20,7 @@ def uper_bound(nums, target):
     n = len(nums)
     low = 0
     high = n - 1
-    ub = -1
+    ub = n
 
     while low <= high:
         mid = (low + high) // 2
@@ -43,6 +43,6 @@ def countOccurrance(nums, target):
     return count
 
 nums = [1, 2, 3, 3, 3, 3, 3, 5, 6, 8, 9, 9, 10]
-target = 3
+target = 10
 result = countOccurrance(nums, target)
 print(result)
