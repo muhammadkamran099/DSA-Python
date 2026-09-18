@@ -14,7 +14,7 @@ def insertSearch(nums, target):
     
 
 
-nums = [1, 3, 4, 5, 6, 7, 9, 11, 14, 15, 17, 20]
+nums = [1, 3, 4, 5, 6, 7, 9, 11, 14, 15, 17, 21]
 target = 14
 result = insertSearch(nums, target)
 print(result)
