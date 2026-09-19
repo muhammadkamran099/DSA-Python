@@ -5,13 +5,10 @@ def minRotatedSorted(nums):
     mini = float("inf")
 
     while low <= high:
-        if nums[low] <= nums[high]:
-            mini = min(mini, nums[low])
-            break
 
         mid = (low + high) // 2
 
-        if nums[high] > nums[mid]:
+        if nums[high] >= nums[mid]:
             mini = min(mini, nums[mid])
             high = mid - 1
         else:
