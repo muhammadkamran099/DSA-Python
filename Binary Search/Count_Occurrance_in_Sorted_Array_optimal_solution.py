@@ -46,3 +46,4 @@ nums = [1, 2, 3, 3, 3, 3, 3, 5, 6, 8, 9, 9, 10]
 target = 10
 result = countOccurrance(nums, target)
 print(result)
+
