@@ -10,6 +10,3 @@ def max_depth(s):
             curr_depth -= 1
             
     return max_depth
-
-s = "(())((()))"
-print(max_depth(s))
