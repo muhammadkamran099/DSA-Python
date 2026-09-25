@@ -26,8 +26,3 @@ def search_rotated_sorted_array(nums, target):
                 high = mid - 1
 
     return is_true
-
-nums = [1, 0, 1, 1, 1]
-target = 0
-result = search_rotated_sorted_array(nums, target)
-print(result)
