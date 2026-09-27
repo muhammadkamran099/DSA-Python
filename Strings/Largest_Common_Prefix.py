@@ -8,10 +8,4 @@ def Largest_Common_Prefix(strs):
                 return s
         s += base[i]
     return s
-    
 
-
-
-strs = ["flower", "flow", "flight"]
-result = Largest_Common_Prefix(strs)
-print(result)
