@@ -8,5 +8,3 @@ def sortFreq(s):
         result += ch*freq
     return result
     
-s = "tree"
-print(sortFreq(s))
