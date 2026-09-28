@@ -19,7 +19,3 @@ def roman_to_int(s):
             result += letters[s[i]]
 
     return result
-
-
-s = "MCMXCIV"
-print(roman_to_int(s))
