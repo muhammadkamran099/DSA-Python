@@ -11,4 +11,3 @@ def checkAnagramString(s, t):
 s = "anagram"
 t = "nagaram"
 
-print(checkAnagramString(s, t))
