@@ -14,7 +14,7 @@ class SinglyList:
             self.head = new_node
         else:
             current = self.head
-            while current is not None:
+            while current.next is not None:
                 current = current.next
             current.next = new_node
     def traversal(self):
