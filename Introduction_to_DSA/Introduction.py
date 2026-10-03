@@ -1,4 +1,4 @@
-""" What is DSA?
+"""DSA?
 
 Think of Data Structures and Algorithms (DSA) like organizing a kitchen:
 
