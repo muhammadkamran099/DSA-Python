@@ -19,7 +19,7 @@ Python has built-in ways to store data. Here are the four most common ones:
 Lists []
 An ordered collection of items that you can change. Like a grocery list."""
 
-fruits = ["apple", "banana", "cherry"]
+fruits = ["apple", "banana", "cherry", "Mango"]
 fruits.append("date")  # Adds to the end
 
 """Tuples ()
