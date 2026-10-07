@@ -48,7 +48,6 @@ s1 = SinglyList()
 s1.append(8)
 s1.append(7)
 s1.append(3)
-s1.append(2)
 s1.insert_at(1, 3)
 s1.traversal()
                 
