@@ -19,10 +19,19 @@ class SinglyList:
             current.next = new_node
     def traversal(self):
         if self.head is None:
-            print("Linked List is empty! ")
+            print("Oops! Your Linked List is empty. ")
         else:
             current = self.head
             while current is not None:
                 print(current.val, end=" ")
                 current = current.next
+    
+    
+s1 = SinglyList()
+s1.append(8)
+s1.append(7)
+s1.append(3)
+s1.append(2)
+
+s1.traversal()
                 
