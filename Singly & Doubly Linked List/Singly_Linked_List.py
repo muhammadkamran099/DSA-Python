@@ -84,7 +84,6 @@ s1.append(8)
 s1.append(7)
 s1.append(4)
 s1.append(8)
-s1.insert_at(1, 3)
 s1.insert_at(3, 5)
 
 s1.delete(7)
