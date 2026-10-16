@@ -35,7 +35,6 @@ class SinglyList:
         else:
             current = self.head
             count = 0
-            prev = None
             while current is not None and count < position:
                 if count == position:
                     prev.next = new_node
