@@ -52,14 +52,16 @@ class SinglyList:
         current.next = new_node
     
     def delete(self, val):
-        current = self.head
         if self.head is None:
             print("Node not found")
             return
         if self.head.val == val:
             self.head = self.head.next
         else:
-            
+            current = self.head
+            while current is not None:
+                
+                
 
 
 
