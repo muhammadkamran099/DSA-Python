@@ -63,7 +63,7 @@ class SinglyList:
         if self.head.val == val:
             self.head = self.head.next
             return
-
+        
         prev = None
         current = self.head
 
