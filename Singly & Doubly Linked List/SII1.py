@@ -36,15 +36,21 @@ class SinglyList:
             current = self.head
             count = 0
             while current is not None and count < position:
+                count += 1
+                current = current.next
                 if count == position:
-                    prev.next = new_node
                     new_node.next = current.next
+                    current.next = new_node
                     return
                 count += 1
                 prev = current
                 current = current.next
                 
+    def delete(self, val):
+        if self.head is None:
+            print("Node not found! ")
             
+        
                     
         
 

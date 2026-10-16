@@ -41,7 +41,7 @@ class SinglyList:
         current = self.head
         count = 0
 
-        while current is not None and count < position - 1:
+        while current is not None and count < position:
             current = current.next
             count += 1
 
