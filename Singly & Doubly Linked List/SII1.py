@@ -35,20 +35,23 @@ class SinglyList:
         else:
             current = self.head
             count = 0
-            while current is not None:
+            prev = None
+            while current is not None and count < position:
                 if count == position:
+                    prev.next = new_node
                     new_node.next = current.next
-                    current = new_node
                     return
                 count += 1
+                prev = current
                 current = current.next
+                
             
                     
         
 
 
 s = SinglyList()
-for i in range(3, 6):
+for i in range(0, 6):
     s.append(i)
-s.insert(0, 8)
+s.insert(3, 8)
 s.traversal()
