@@ -70,4 +70,5 @@ s = SinglyList()
 for i in range(0, 6):
     s.append(i)
 s.insert(3, 8)
+s.delete(3)
 s.traversal()
