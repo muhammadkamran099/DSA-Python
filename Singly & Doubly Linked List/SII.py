@@ -78,4 +78,5 @@ s = SinglyList()
 for i in range(0, 11):
     s.append(i)
 s.insert(3, 5)
+s.delete(5)
 s.traversal()
