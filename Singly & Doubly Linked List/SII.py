@@ -60,7 +60,8 @@ class SinglyList:
         else:
             current = self.head
             while current is not None:
-                
+                if current.val == val:
+                    
                 
 
 
