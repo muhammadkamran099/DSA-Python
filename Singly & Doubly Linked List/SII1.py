@@ -16,9 +16,20 @@ class SinglyList:
             while current.next is not None:
                 current = current.next
             current.next = new_node
+    def traversal(self):
+        if self.head is None:
+            print("Oops! Your list is empty. ")
+            return
+        else:
+            current = self.head
+            while current is not None:
+                print(current.val, end=" ")
+                current = current.next
+
         
 
 
 s = SinglyList()
 for i in range(0, 6):
     s.append(i)
+s.traversal()
