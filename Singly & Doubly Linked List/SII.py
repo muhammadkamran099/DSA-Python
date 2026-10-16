@@ -59,9 +59,16 @@ class SinglyList:
             self.head = self.head.next
         else:
             current = self.head
+            prev = None
             while current is not None:
                 if current.val == val:
-                    
+                    prev.next = current.next
+                    return
+                prev = current
+                current = current.next
+            print("Opps! Node not found. ")
+            
+
                 
 
 
