@@ -81,7 +81,6 @@ class SinglyList:
 s1 = SinglyList()
 s1.append(9)
 s1.append(7)
-s1.append(4)
 s1.append(9)
 s1.insert_at(3, 5)
 s1.insert_at(1, 8)
