@@ -49,7 +49,18 @@ class SinglyList:
     def delete(self, val):
         if self.head is None:
             print("Node not found! ")
-            
+            return
+        else:
+            if self.head.val == val:
+                self.head = self.head.next
+                return
+            prev = None
+            current = self.head
+            while current is not None:
+                if current.val == val:
+                    prev.next = current.next
+                prev = current
+                current = current.next
         
                     
         
