@@ -77,18 +77,31 @@ class SinglyList:
 
         print("Node not found")
         
+
     def MidLinkedList(self):
+        if self.head is None:
+            print("Linked List is empty!")
+            return
+
         n = 0
         current = self.head
+
         while current is not None:
             n += 1
             current = current.next
+
+        temp = self.head
+
+        for i in range(n // 2):
+            temp = temp.next
+
+        print(temp.val)
 
 s1 = SinglyList()
 s1.append(9)
 s1.append(7)
 s1.append(8)
-s1.append(9)
 s1.insert_at(3, 5)
 s1.insert_at(1, 8)
 s1.traversal()
+s1.MidLinkedList()
