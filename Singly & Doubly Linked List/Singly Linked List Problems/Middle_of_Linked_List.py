@@ -78,7 +78,7 @@ class SinglyList:
         print("Node not found")
         
 
-    def MidLinkedList(self):
+    def MiddleNode(self):
         if self.head is None:
             print("Linked List is empty!")
             return
