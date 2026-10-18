@@ -33,6 +33,7 @@ head.next = Node(2)
 head.next.next = Node(3)
 head.next.next.next = Node(4)
 head.next.next.next.next = Node(5)
+head.next.next.next.next.next = Node(6)
 
 revList(head)
 traversal(head)
