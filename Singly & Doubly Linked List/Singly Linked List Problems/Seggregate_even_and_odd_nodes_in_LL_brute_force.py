@@ -5,18 +5,24 @@ class Node:
         
 
 def oddEvenList(head):
+    if head is None:
+        return head
     temp = head
     my_list = []
     
-    while temp and temp.next is not None:
+    while temp is not None:
         my_list.append(temp.val)
+        if temp.next is None:
+            break
         temp = temp.next.next
-    print(my_list)
+
     temp = head.next
-    while temp and temp.next is not None:
+    while temp is not None:
         my_list.append(temp.val)
+        if temp.next is None:
+            break
         temp = temp.next.next
-    print(my_list)
+
         
     current = head
     n = len(my_list)
