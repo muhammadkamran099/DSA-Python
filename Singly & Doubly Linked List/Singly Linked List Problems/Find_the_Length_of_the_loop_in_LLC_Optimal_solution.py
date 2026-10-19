@@ -11,12 +11,13 @@ def detectCycle(head):
         slow = slow.next
         fast = fast.next.next
         if fast == slow:
-            slow = head
-            while slow != fast:
-                slow = slow.next
-                fast = fast.next
-            return slow.val
-    return None
+            count = 1
+            current = slow.next
+            while current != slow:
+                current = current.next
+                count += 1
+            return count
+    return 0
 
 
 head = Node(1)
