@@ -14,17 +14,6 @@ def detectCycle(head):
         temp = temp.next
     return False
     
-# def traversal(head):
-#         if head is None:
-#             print("Oops! Your Linked List is empty.")
-#             return
-
-#         current = head
-
-#         while current is not None:
-#             print(current.val, end=" ")
-#             current = current.next
-    
 
 
 head = Node(1)
@@ -36,5 +25,4 @@ head.next.next.next.next.next = Node(6)
 head.next.next.next.next.next = head.next.next.next
 
 print(detectCycle(head))
-# traversal(head)
 
