@@ -9,10 +9,16 @@ def detectCycle(head):
     my_set = set()
     while temp is not None:
         if temp in my_set:
-            return temp.val
+            count = 1
+            current = temp
+            temp = temp.next
+            while temp != current:
+                temp = temp.next
+                count += 1
+            return count
         my_set.add(temp)
         temp = temp.next
-    return False
+    return None
     
 
 
@@ -22,7 +28,11 @@ head.next.next = Node(3)
 head.next.next.next = Node(4)
 head.next.next.next.next = Node(5)
 head.next.next.next.next.next = Node(6)
-head.next.next.next.next.next = head.next.next.next
+head.next.next.next.next.next.next = Node(7)
+head.next.next.next.next.next.next.next = Node(8)
+head.next.next.next.next.next.next.next.next = Node(9)
+head.next.next.next.next.next.next.next.next.next = Node(10)
+head.next.next.next.next.next.next.next.next.next.next = head.next.next.next
 
 print(detectCycle(head))
 
