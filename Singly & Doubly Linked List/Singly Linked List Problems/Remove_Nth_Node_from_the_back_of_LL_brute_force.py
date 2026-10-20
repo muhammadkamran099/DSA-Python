@@ -6,7 +6,7 @@ class Node:
 
 
 def removeNthNode(head, n):
-    if head is None:
+    if head is None or n <= 0:
         return head
 
     count = 0
