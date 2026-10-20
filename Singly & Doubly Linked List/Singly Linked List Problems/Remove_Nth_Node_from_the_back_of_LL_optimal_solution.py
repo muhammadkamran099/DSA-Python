@@ -3,8 +3,7 @@ class Node:
     def __init__(self, val):
         self.val = val
         self.next = None
-
-
+        
 def removeNthNode(head, n):
     if head is None or n <= 0:
         return head
@@ -17,16 +16,15 @@ def removeNthNode(head, n):
             return head
         p1 = p1.next
 
-        if p1 is None:
-            return head.next
+    if p1 is None:
+        return head.next
 
-        while p1.next is not None:
-            p1 = p1.next
-            p2 = p2.next
+    while p1.next is not None:
+        p1 = p1.next
+        p2 = p2.next
 
-        p2.next = p2.next.next
-
-        return head
+    p2.next = p2.next.next
+    return head
 
 
 
@@ -49,5 +47,5 @@ head.next.next.next = Node(4)
 head.next.next.next.next = Node(5)
 head.next.next.next.next.next = Node(6)
 
-head = removeNthNode(head, 3)
+removeNthNode(head, 2)
 traversal(head)
