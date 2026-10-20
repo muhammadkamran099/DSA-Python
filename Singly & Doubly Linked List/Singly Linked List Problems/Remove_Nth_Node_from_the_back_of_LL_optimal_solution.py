@@ -8,22 +8,25 @@ class Node:
 def removeNthNode(head, n):
     if head is None or n <= 0:
         return head
+
     p1 = head
     p2 = head
+
     for i in range(n):
+        if p1 is None:
+            return head
         p1 = p1.next
-    count = 0
-    while p1.next is not None:
-        count += 1
-        p1 = p1.next
-        p2 = p2.next
-    p2.next = p2.next.next
-    
-    if n > count:
+
+        if p1 is None:
+            return head.next
+
+        while p1.next is not None:
+            p1 = p1.next
+            p2 = p2.next
+
+        p2.next = p2.next.next
+
         return head
-    if n == count:
-        return head.next
-    return head
 
 
 
