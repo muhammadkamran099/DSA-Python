@@ -12,10 +12,17 @@ def removeNthNode(head, n):
     p2 = head
     for i in range(n):
         p1 = p1.next
+    count = 0
     while p1.next is not None:
+        count += 1
         p1 = p1.next
         p2 = p2.next
     p2.next = p2.next.next
+    
+    if n > count:
+        return head
+    if n == count:
+        return head.next
     return head
 
 
