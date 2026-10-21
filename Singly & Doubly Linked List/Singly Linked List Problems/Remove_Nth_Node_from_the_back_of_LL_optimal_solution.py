@@ -46,6 +46,7 @@ head.next.next = Node(3)
 head.next.next.next = Node(4)
 head.next.next.next.next = Node(5)
 head.next.next.next.next.next = Node(6)
+head.next.next.next.next.next.next = Node(7)
 
 removeNthNode(head, 2)
 traversal(head)
