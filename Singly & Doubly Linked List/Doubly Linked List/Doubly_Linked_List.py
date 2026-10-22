@@ -16,6 +16,11 @@ class DoublyLinkedList:
             new_node.next = self.head
             self.head.prev = new_node
             self.head = new_node
+    def traversal(self):
+        current = self.head
+        while current is not None:
+            print(current.val, end=" ")
+            current = current.next
             
             
 d = DoublyLinkedList()
@@ -23,4 +28,5 @@ d = DoublyLinkedList()
 d.insert_at_head(10)
 d.insert_at_head(9)
 d.insert_at_head(8)
-print(d.head.val)
+
+d.traversal()
