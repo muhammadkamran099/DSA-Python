@@ -14,4 +14,13 @@ class DoublyLinkedList:
             self.head = new_node
         else:
             new_node.next = self.head
+            self.head.prev = new_node
+            self.head = new_node
             
+            
+d = DoublyLinkedList()
+
+d.insert_at_head(10)
+d.insert_at_head(9)
+d.insert_at_head(8)
+print(d.head.val)
