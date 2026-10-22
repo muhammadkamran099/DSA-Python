@@ -40,6 +40,7 @@ d = DoublyLinkedList()
 d.insert_at_head(10)
 d.insert_at_head(9)
 d.insert_at_head(8)
-d.i(8)
+d.insert_at_last(11)
+d.insert_at_last(12)
 
 d.traversal()
