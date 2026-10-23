@@ -33,6 +33,29 @@ class DoublyLinkedList:
         while current is not None:
             print(current.val, end=" ")
             current = current.next
+    def insert_between(self, val, pos):
+        if self.head is None:
+            print("Opps! Your list is empty. ")
+            return
+        if pos < 0:
+            print("Invalid Position! ")
+            return
+        new_node = Node(val)
+        current = self.head
+        count = 0
+        while current.next is not None:
+            current = current.next
+            count += 1
+        if count < pos:
+            print("Your position is greater than list size")
+            return
+        temp = self.head
+        while temp.next is not None:
+            temp = temp.next
+        new_node.next = temp.next
+        temp.next.prev = new_node
+        temp.next = new_node
+        new_node.prev = temp
             
             
 d = DoublyLinkedList()
@@ -40,6 +63,7 @@ d = DoublyLinkedList()
 d.insert_at_head(10)
 d.insert_at_head(9)
 d.insert_at_head(8)
-d.insert_at_last(11)
+d.insert_at_last(12)
+d.insert_between(11, 3)
 
 d.traversal()
