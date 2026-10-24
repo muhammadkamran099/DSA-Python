@@ -69,7 +69,11 @@ class DoublyLinkedList:
             count += 1
         if current is None:
             print("Your position is out of bound")
-        ne
+        new_node.next = current.next
+        new_node.prev = current
+        if current.next:
+            current.next.prev = new_node
+        current.next = new_node
             
 d = DoublyLinkedList()
 
