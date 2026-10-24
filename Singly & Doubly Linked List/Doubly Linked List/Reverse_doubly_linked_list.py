@@ -124,8 +124,12 @@ class DoublyLinkedList:
         current.prev.next = current.next
         if current.next:
             current.next.prev = current.prev
-
-
+    
+    def reverseList(self):
+        if self.head is None:
+            print("Opps! Your list is empty. ")
+            return
+        
 
 d = DoublyLinkedList()
 
