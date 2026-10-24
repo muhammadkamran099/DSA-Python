@@ -30,6 +30,8 @@ class DoublyLinked:
         if self.head is None:
             print("Oops! Your list is empty. ")
             return
+        new_node = Node(val)
+        
         
         
 d = DoublyLinked()
