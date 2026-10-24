@@ -103,44 +103,24 @@ class DoublyLinkedList:
             self.head = None
         else:
             current.prev.next = None
-
-    # def deleteInBetween(self, val):
-    #     if self.head is None:
-    #         print("Oops! Your list is empty.")
-    #         return
-
-    #     current = self.head
-
-    #     while current is not None and current.val != val:
-    #         current = current.next
-
-    #     if current is None:
-    #         print("Value not found.")
-    #         return
-
-    #     if current.prev is None:
-    #         self.head = current.next
-
-    #         if self.head is not None:
-    #             self.head.prev = None
-
-    #     else:
-    #         current.prev.next = current.next
-
-    #         if current.next is not None:
-    #             current.next.prev = current.prev
     
     
     def delete_in_Between(self, val):
         if self.head is None:
             print("Opps! Your list is empty. ")
             return
-        if self.head.next is None:
-            self.head = None
+    
+        if self.head.val == val:
+            self.delete_head(val)
             return
+        
         current = self.head
-        while current.next is not None and current.val != val:
+        while current is not None and current.val != val:
             current = current.next
+
+        if current is None:
+            print("Node not found. ")
+            return
         current.prev.next = current.next
         if current.next:
             current.next.prev = current.prev
@@ -157,6 +137,6 @@ d.insert_between(11, 3)
 
 
 
-
+d.delete_in_Between(12)
 
 d.traversal()
