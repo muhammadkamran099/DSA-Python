@@ -129,7 +129,18 @@ class DoublyLinkedList:
         if self.head is None:
             print("Opps! Your list is empty. ")
             return
-        
+        st = []
+        temp = self.head
+        while temp is not None:
+            st.append(temp.val)
+            temp = temp.next
+        temp = self.head
+        while temp is not None:
+            e = st.pop()
+            temp.val = e
+            temp = temp.next
+            
+            
 
 d = DoublyLinkedList()
 
@@ -142,5 +153,7 @@ d.insert_between(11, 3)
 
 
 d.delete_in_Between(12)
+
+d.reverseList()
 
 d.traversal()
