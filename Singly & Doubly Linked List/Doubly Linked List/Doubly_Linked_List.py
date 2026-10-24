@@ -54,11 +54,62 @@ class DoublyLinkedList:
         if current.next is not None:
             current.next.prev = new_node
         current.next = new_node
+        
+
     def delete_head(self, val):
-        current = self.head
-        if current.val == val:
-            self.head.next.prev = self.head.prev
+        if self.head is None:
+            print("Oops! Your list is empty.")
+            return
+
+        if self.head.val == val:
             self.head = self.head.next
+
+            if self.head is not None:
+                self.head.prev = None
+            return
+
+
+
+    def delete_lastNode(self, val):
+        if self.head is None:
+            print("Oops! Your list is empty.")
+            return
+
+        current = self.head
+
+        while current.next is not None:
+            current = current.next
+
+        if current.val == val:
+            if current.prev is not None:
+                current.prev.next = None
+            else:
+                self.head = None
+
+        
+    def deleteInBetween(self, val):
+        if self.head is None:
+            print("Opps! Your list is empty. ")
+            return
+        if self.head.val == val:
+            self.delete_head(val)
+            return
+                
+        current = self.head
+        while current.next is not None:
+            current = current.next
+            if current.val == val:
+                if current.next is not None:
+                    current.prev.next = current.next
+                    current.next.prev = current.prev
+                    return
+                if current.next is None:
+                    self.delete_lastNode(val)
+                    return
+
+        
+        
+  
             
 d = DoublyLinkedList()
 
@@ -66,6 +117,7 @@ d.insert_at_head(10)
 d.insert_at_head(9)
 d.insert_at_head(8)
 d.insert_at_last(12)
-d.insert_between(11, 4)
-d.delete_head(8)
+d.insert_between(11, 3)
+d.deleteInBetween(11)
+
 d.traversal()
