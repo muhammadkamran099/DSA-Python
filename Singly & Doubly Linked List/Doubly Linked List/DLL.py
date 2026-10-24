@@ -27,7 +27,9 @@ class DoublyLinked:
             current = current.next
         
     def insert_at_end(self, val):
-        
+        if self.head is None:
+            print("Oops! Your list is empty. ")
+            return
         
         
 d = DoublyLinked()
