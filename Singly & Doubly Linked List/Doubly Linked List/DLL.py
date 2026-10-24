@@ -27,15 +27,21 @@ class DoublyLinked:
             current = current.next
         
     def insert_at_end(self, val):
-        if self.head is None:
-            print("Oops! Your list is empty. ")
-            return
         new_node = Node(val)
-        
+        if self.head is None:
+            self.head = new_node
+            return 
+        current = self.head
+        while current.next is not None:
+            current = current.next
+        current.next = new_node
+        new_node.prev = current
         
         
 d = DoublyLinked()
 d.insert_at_head(8)
 d.insert_at_head(7)
 d.insert_at_head(6)
+d.insert_at_end(9)
+d.insert_at_end(10)
 d.traverse()
