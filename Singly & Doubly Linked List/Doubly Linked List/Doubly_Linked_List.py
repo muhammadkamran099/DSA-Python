@@ -33,30 +33,43 @@ class DoublyLinkedList:
         while current is not None:
             print(current.val, end=" ")
             current = current.next
+
+    # def insert_between(self, val, pos):
+    #     if pos == 0:
+    #         self.insert_at_head(val)
+    #         return
+    #     if self.head is None:
+    #         return
+    #     new_node = Node(val)
+    #     current = self.head
+    #     count = 0
+    #     while current.next is not None and count < pos - 1:
+    #         current = current.next
+    #         count += 1
+    #     if current is None:
+    #         print("Your position is out of bound")
+    #         return
+    #     new_node.next = current.next
+    #     new_node.prev = current
+    #     if current.next is not None:
+    #         current.next.prev = new_node
+    #     current.next = new_node
+        
     def insert_between(self, val, pos):
-        if self.head is None:
-            print("Opps! Your list is empty. ")
+        if pos == 0:
+            self.insert_at_head(val)
             return
-        if pos < 0:
-            print("Invalid Position! ")
+        if self.head is None:
             return
         new_node = Node(val)
         current = self.head
         count = 0
-        while current.next is not None:
+        while current.next is not None and count < pos - 1:
             current = current.next
             count += 1
-        if count < pos:
-            print("Your position is greater than list size")
-            return
-        temp = self.head
-        while temp.next is not None:
-            temp = temp.next
-        new_node.next = temp.next
-        temp.next.prev = new_node
-        temp.next = new_node
-        new_node.prev = temp
-            
+        if current is None:
+            print("Your position is out of bound")
+        ne
             
 d = DoublyLinkedList()
 
@@ -64,6 +77,6 @@ d.insert_at_head(10)
 d.insert_at_head(9)
 d.insert_at_head(8)
 d.insert_at_last(12)
-d.insert_between(11, 3)
+d.insert_between(11, 4)
 
 d.traversal()
