@@ -54,7 +54,11 @@ class DoublyLinkedList:
         if current.next is not None:
             current.next.prev = new_node
         current.next = new_node
-        
+    def delete_head(self, val):
+        current = self.head
+        if current.val == val:
+            self.head.next.prev = self.head.prev
+            self.head = self.head.next
             
 d = DoublyLinkedList()
 
@@ -63,5 +67,5 @@ d.insert_at_head(9)
 d.insert_at_head(8)
 d.insert_at_last(12)
 d.insert_between(11, 4)
-
+d.delete_head(8)
 d.traversal()
