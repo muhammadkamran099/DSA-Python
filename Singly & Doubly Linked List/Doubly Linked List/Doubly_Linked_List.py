@@ -34,27 +34,6 @@ class DoublyLinkedList:
             print(current.val, end=" ")
             current = current.next
 
-    # def insert_between(self, val, pos):
-    #     if pos == 0:
-    #         self.insert_at_head(val)
-    #         return
-    #     if self.head is None:
-    #         return
-    #     new_node = Node(val)
-    #     current = self.head
-    #     count = 0
-    #     while current.next is not None and count < pos - 1:
-    #         current = current.next
-    #         count += 1
-    #     if current is None:
-    #         print("Your position is out of bound")
-    #         return
-    #     new_node.next = current.next
-    #     new_node.prev = current
-    #     if current.next is not None:
-    #         current.next.prev = new_node
-    #     current.next = new_node
-        
     def insert_between(self, val, pos):
         if pos == 0:
             self.insert_at_head(val)
@@ -69,11 +48,13 @@ class DoublyLinkedList:
             count += 1
         if current is None:
             print("Your position is out of bound")
+            return
         new_node.next = current.next
         new_node.prev = current
-        if current.next:
+        if current.next is not None:
             current.next.prev = new_node
         current.next = new_node
+        
             
 d = DoublyLinkedList()
 
