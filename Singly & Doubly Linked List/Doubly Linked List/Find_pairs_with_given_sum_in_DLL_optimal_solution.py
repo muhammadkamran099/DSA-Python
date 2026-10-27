@@ -102,7 +102,7 @@ d.insert_at_head(1)
 d.insert_at_last(4)
 d.insert_at_last(5)
 d.insert_at_last(6)
-d.insert_at_last(8)
+
 
 print(d.pairSum(7))
 
