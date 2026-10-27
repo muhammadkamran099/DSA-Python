@@ -97,9 +97,9 @@ d = DoublyLinkedList()
 d.insert_at_head(3)
 d.insert_at_head(3)
 
-d.insert_at_last(6)
 d.insert_at_last(3)
-d.insert_at_last(5)
+d.insert_at_last(3)
+d.insert_at_last(3)
 d.insert_at_last(3)
 
 d.traversal()
