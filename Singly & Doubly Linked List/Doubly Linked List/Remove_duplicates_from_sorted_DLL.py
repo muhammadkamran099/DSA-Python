@@ -71,22 +71,18 @@ class DoublyLinkedList:
 
         print()
         
-    def remove_key_occurrance(self, key):
+    def RemoveDuplicates(self):
         current = self.head
 
-        while current is not None:
-            if current.val == key:
-                if current.prev is None:
-                    self.head = current.next
-                else:
-                    current.prev.next = current.next
+        while current is not None and current.next is not None:
+            if current.val == current.next.val:
+                duplicate = current.next
+                current.next = duplicate.next
 
-                if current.next is not None:
-                    current.next.prev = current.prev
-
-            current = current.next
-
-        return self.head
+                if duplicate.next is not None:
+                    duplicate.next.prev = current
+            else:
+                current = current.next
                     
 
     
@@ -103,4 +99,9 @@ d.insert_at_last(8)
 d.insert_at_last(9)
 
 d.traversal()
+
+d.RemoveDuplicates()
+
+d.traversal()
+
 
