@@ -134,21 +134,31 @@ class DoublyLinkedList:
         
     
     def insert_in_sorted_list(self, val):
+        new_node = Node(val)
+
         if self.head is None:
-            print("Opps! your list is empty. ")
-            return 
-        slow = self.head
-        fast = slow.next
+            self.head = new_node
+            return
+
+        if val <= self.head.val:
+            new_node.next = self.head
+            self.head.prev = new_node
+            self.head = new_node
+            return
+
         current = self.head
-        while current.next is not None:
-            if slow.val <= val:
-                if fast.val >= val:
-                    self.insert_in_sorted(val, slow, fast)
-                    return
-            slow = slow.next
-            fast = fast.next
+
+        while current.next is not None and current.next.val < val:
             current = current.next
-        print("No valid place to insert")
+
+        new_node.next = current.next
+        new_node.prev = current
+
+        if current.next is not None:
+            current.next.prev = new_node
+
+        current.next = new_node
+        
 
         
         
@@ -163,12 +173,15 @@ d.insert_at_head(9)
 d.insert_at_head(7)
 d.insert_at_last(12)
 d.insert_between(11, 3)
-d.insert_at_last(12)
+
 
 d.insert_in_sorted_list(8)
+d.insert_in_sorted_list(6)
+d.insert_in_sorted_list(10)
 
 
-d.delete_in_Between(12)
+
+
 
 
 
