@@ -78,7 +78,7 @@ class DoublyLinkedList:
         my_set = set()
         result = []
         temp = self.head
-        while temp.next is not None:
+        while temp is not None:
             if target - temp.val in my_set:
                 result.append([target - temp.val, temp.val])
             my_set.add(temp.val)
