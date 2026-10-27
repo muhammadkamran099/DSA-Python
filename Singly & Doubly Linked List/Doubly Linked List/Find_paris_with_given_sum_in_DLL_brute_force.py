@@ -71,6 +71,20 @@ class DoublyLinkedList:
 
         print()
 
+    def pairSum(self, target):
+        if self.head is None:
+            print("List is empty. ")
+            return
+        temp1 = self.head
+        result = []
+        while temp1 is not None:
+            temp2 = temp1.next
+            while temp2 is not None:
+                if temp1.val + temp2.val == target:
+                    result.append([temp1.val, temp2.val])
+                temp2 = temp2.next
+            temp1 = temp1.next
+        return result
 
 
 
@@ -83,6 +97,7 @@ d.insert_at_last(5)
 d.insert_at_last(6)
 d.insert_at_last(8)
 
+print(d.pairSum(7))
 
 
 
