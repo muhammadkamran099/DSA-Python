@@ -148,6 +148,7 @@ d.insert_at_head(10)
 d.insert_at_head(9)
 d.insert_at_head(8)
 d.insert_at_last(12)
+d.insert_at_last(12)
 d.insert_between(11, 3)
 
 
