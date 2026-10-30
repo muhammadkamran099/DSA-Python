@@ -1,6 +1,6 @@
 
     
-nums = [3, 4]
+nums = [5, 9, 7]
 result = []
 
 def printSubSuquence(index, subseq):
