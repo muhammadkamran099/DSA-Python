@@ -1,25 +1,12 @@
-def decimal_to_binary(num):
-    if num == 0:
-        return "0"
+def convert_to_decimal(st):
+    decimal_number = 0
+    index = len(st) - 1
+    power = 0
+    while index >= 0:
+        num = int(st[index]) * (2**power)
+        decimal_number += num
+        index -= 1
+        power += 1
+    return decimal_number
 
-    is_negative = num < 0
-    num = abs(num)
-    result = ""
-
-    while num != 0:
-        if num % 2 == 0:
-            result += "0"
-        else:
-            result += "1"
-
-        num = num // 2
-
-    result = result[::-1]
-
-    if is_negative:
-        result = "-" + result
-
-    return result
-
-
-print(decimal_to_binary(8))    
+print(convert_to_decimal("1101"))
