@@ -25,6 +25,7 @@ s.push(1)
 print(s.items)
 
 s.pop()
+s.pop()
 
 print(s.items)
 
