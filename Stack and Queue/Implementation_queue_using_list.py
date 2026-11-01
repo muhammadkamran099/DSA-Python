@@ -24,6 +24,7 @@ class Queue:
 
 q = Queue()
 
+q.push(5)
 q.push(4)
 q.push(3)
 q.push(2)
@@ -34,3 +35,4 @@ print(q.pop())
 print(q.pop())
 print(q.front())
 print(q.rear())
+
