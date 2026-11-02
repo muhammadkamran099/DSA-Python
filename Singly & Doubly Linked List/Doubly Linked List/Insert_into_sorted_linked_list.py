@@ -178,11 +178,6 @@ d.insert_between(11, 3)
 d.insert_in_sorted_list(8)
 d.insert_in_sorted_list(6)
 d.insert_in_sorted_list(10)
-
-
-
-
-
-
+d.insert_in_sorted_list(10)
 
 d.traversal()
