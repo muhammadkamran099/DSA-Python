@@ -1,12 +1,21 @@
-def convert_to_decimal(st):
-    decimal_number = 0
-    index = len(st) - 1
-    power = 0
-    while index >= 0:
-        num = int(st[index]) * (2**power)
-        decimal_number += num
-        index -= 1
-        power += 1
-    return decimal_number
+def convert_to_decimal(n):
+    if n == 0:
+        return 0
 
-print(convert_to_decimal("1101"))
+    result = 0
+    power = 0
+
+    while n > 0:
+        r = n % 10
+
+        if r > 1:
+            return "Invalid Binary Number"
+
+        result += r * (2 ** power)
+        n //= 10
+        power += 1
+
+    return result
+
+
+print(convert_to_decimal(1011))
