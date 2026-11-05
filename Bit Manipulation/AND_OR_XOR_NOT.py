@@ -29,31 +29,14 @@
 
 # 4. NOT (~)
 # Flips all bits.
-# In Python: ~n = -(n + 1)
+# check if number is negative( if last 31th bit 1 then its negative number if 0 then its positive number) then takes two's compliment if not negative then stop
+
 
 #   5  = 00000101
 #  ~5  = 11111010  (two's complement representation)
 # Result = -6
 
 
-# 5. LEFT SHIFT (<<)
-# Shifts bits to the LEFT.
-# Adds zeros on the right.
-# Each left shift by 1 multiplies by 2.
-
-#   5 = 00000101
-#       << 1
-#       00001010 = 10
-
-
-# 6. RIGHT SHIFT (>>)
-# Shifts bits to the RIGHT.
-# For positive numbers, removes bits from the right.
-# Each right shift by 1 divides by 2 (floor division).
-
-#   5 = 00000101
-#       >> 1
-#       00000010 = 2
 
 print(5 >> 1)  # 2
 print(5 >> 2)  # 1
