@@ -6,13 +6,20 @@ def bfs(adj, n, start):
     ans = []
     queue.append(start)
     visited[start] = 1
-    
+    while len(queue) != 0:
+        e = queue.popleft()
+        ans.append(e)
+        for node in adj[e]:
+            if visited[node] == 0:
+                visited[node] = 1
+                queue.append(node)
+    return ans
 
 
 
 
 
-adjacency_list = [
+adj = [
     [],
     [2, 8],
     [1, 3, 4],
@@ -27,3 +34,5 @@ adjacency_list = [
 ]
 
 n = 9
+
+print(bfs(adj, n, 1))
