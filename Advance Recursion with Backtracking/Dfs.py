@@ -1,10 +1,25 @@
 
-def dfs(visited, result, adj, node):
+# def dfs(visited, result, adj, node):
+#     visited[node] = 1
+#     result.append(node)
+#     for i in adj[node]:
+#         if visited[i] == 0:
+#             dfs(visited, result, adj, i)
+
+
+
+
+
+
+
+
+def dfs(adj, result, visited, node):
     visited[node] = 1
     result.append(node)
-    for i in adj[node]:
-        if visited[i] == 0:
-            dfs(visited, result, adj, i)
+    for n in adj[node]:
+        if visited[n] == 0:
+            dfs(adj, result, visited, n)
+        
 
 
 
@@ -22,10 +37,10 @@ adj = [
     [5, 7]
     
 ]
-n = 8
+nodes = 8
 result = []
-visited = [0] * ( n + 1 )
+visited = [0] * ( nodes + 1 )
 
-dfs(visited, result, adj, 1)
+dfs(adj, result, visited, 1)
 
 print(result)
