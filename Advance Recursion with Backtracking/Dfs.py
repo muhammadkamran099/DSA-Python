@@ -37,6 +37,5 @@ result = []
 visited = [0] * ( nodes + 1 )
 
 dfs(adj, result, visited, 1)
-dfs(adj, result, visited, 1)
 
 print(result)
