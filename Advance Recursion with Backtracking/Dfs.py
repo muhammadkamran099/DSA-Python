@@ -20,11 +20,6 @@ def dfs(adj, result, visited, node):
         if visited[n] == 0:
             dfs(adj, result, visited, n)
         
-
-
-
-
-
 adj = [
     [],
     [2, 4],
@@ -41,6 +36,7 @@ nodes = 8
 result = []
 visited = [0] * ( nodes + 1 )
 
+dfs(adj, result, visited, 1)
 dfs(adj, result, visited, 1)
 
 print(result)
