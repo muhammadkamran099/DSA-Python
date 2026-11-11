@@ -1,6 +1,6 @@
 
     
-nums = [5, 9, 4]
+nums = [5, 9, 3]
 result = []
 total = 0
 target = 9
