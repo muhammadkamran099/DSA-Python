@@ -13,8 +13,8 @@ def printSubSuquence(index, subseq, total):
     subseq.append(nums[index])
     total += nums[index]
     printSubSuquence(index + 1, subseq, total)
-    subseq.pop()
-    total -= nums[index]
+    e = subseq.pop()
+    total -= e
     printSubSuquence(index + 1, subseq, total)
     
 subseq = []
