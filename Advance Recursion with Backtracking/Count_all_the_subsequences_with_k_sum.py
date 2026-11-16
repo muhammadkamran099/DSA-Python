@@ -1,6 +1,5 @@
-nums = [7, 9, 2]
-target = 9
-
+nums = [4, 8, 2]
+target = 8
 
 def countSub(index, total):
     if total == target:
