@@ -19,7 +19,7 @@ def combination_sum(index, total, numbers, result, target):
     
     
 my_list = []
-numbers = [2, 3, 6, 7]
+numbers = [2, 3, 5, 7]
 result = []
 target = 7
 
