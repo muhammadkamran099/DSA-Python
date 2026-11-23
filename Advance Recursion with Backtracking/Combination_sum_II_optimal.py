@@ -1,4 +1,11 @@
-def combination_sum_II(index, total, subset):
+def combination_sum_II(index: int, total: float, subset: list) -> list:
+    '''
+    returns a list that contains xyx
+    first takes the value of s;daf
+    process
+    return
+    '''
+    
     if total == 0:
         result.append(subset.copy())
         return
@@ -15,7 +22,7 @@ def combination_sum_II(index, total, subset):
         subset.pop()
     return result
         
-        
+    
         
         
         
