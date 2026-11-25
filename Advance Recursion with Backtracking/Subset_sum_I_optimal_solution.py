@@ -9,7 +9,7 @@ def subset_sum_I(index, total, result):
     subset_sum_I(index + 1, total + numbers[index], result)
 
 
-numbers = [5, 9, 3]
+numbers = [5, 9, 2]
 result = []
 
 subset_sum_I(0, 0, result)
