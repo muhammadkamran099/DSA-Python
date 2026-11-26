@@ -11,6 +11,7 @@ def solve(last, total, subset, k, n, result):
             sum = total + i
             solve(i + 1, sum, subset, k, n, result)
             subset.pop()
+        return result
 
 
 result = []
