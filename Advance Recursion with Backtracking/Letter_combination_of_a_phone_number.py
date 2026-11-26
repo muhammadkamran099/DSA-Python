@@ -10,7 +10,7 @@ def solve(index, subset):
         
         
 index = 0 
-digits = ["4", "6"]
+digits = "46"
 result = []
 char_map = {
     "2": "abc",
